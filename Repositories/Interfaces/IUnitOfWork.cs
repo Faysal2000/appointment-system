@@ -9,7 +9,7 @@ namespace AppointmentSystem.Repositories.Interfaces
 
         IDoctorRepository Doctors { get; }
         IGenericRepository<Patient> Patients { get; }
-        IGenericRepository<Appointment> Appointments { get; }
+        IAppointmentRepository Appointments { get; }
         IGenericRepository<Invoice> Invoices { get; }
         IGenericRepository<Payment> Payments { get; }
         IGenericRepository<Service> Services { get; }

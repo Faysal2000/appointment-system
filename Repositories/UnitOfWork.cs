@@ -11,7 +11,7 @@ namespace AppointmentSystem.Repositories
 
         public IDoctorRepository Doctors { get; private set; }
         public IGenericRepository<Patient> Patients { get; private set; }
-        public IGenericRepository<Appointment> Appointments { get; private set; }
+        public IAppointmentRepository Appointments { get; private set; }
         public IGenericRepository<Invoice> Invoices { get; private set; }
         public IGenericRepository<Payment> Payments { get; private set; }
         public IGenericRepository<Service> Services { get; private set; }
@@ -27,7 +27,7 @@ namespace AppointmentSystem.Repositories
             _context = context;
             Doctors = new DoctorRepository(context);
             Patients = new GenericRepository<Patient>(context);
-            Appointments = new GenericRepository<Appointment>(context);
+            Appointments = new AppointmentRepository(context);
             Invoices = new GenericRepository<Invoice>(context);
             Payments = new GenericRepository<Payment>(context);
             Services = new GenericRepository<Service>(context);

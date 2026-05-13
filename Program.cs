@@ -23,7 +23,8 @@ builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
-
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+builder.Services.AddScoped<IDoctorServiceService, DoctorServiceService>();
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var key = Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]!);
